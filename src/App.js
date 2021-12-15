@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Clients from './Components/Clients/Clients';
+import Container from '@mui/material/Container';
+import Header from './Components/Header/Header';
+import * as React from "react";
+import { Routes, Route } from "react-router-dom";
+import Orders from './Components/Orders/Orders';
+import Home from './Components/Home';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <Header />
+      <Container maxWidth="md">
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='clients' element={<Clients />} />
+          <Route path='orders' element={<Orders/>} />
+        
+       </Routes>
+        
+        
+      </Container>
+      
+    </>
   );
 }
 
