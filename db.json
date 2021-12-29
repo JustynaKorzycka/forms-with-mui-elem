@@ -1,19 +1,24 @@
 {
   "order": [
     {
-      "id": 123,
-      "order_details": "coca-cola *2",
-      "status": "to do"
-    },
-    {
       "order_details": "555edvfgr",
       "id": 124,
       "status": "done"
     },
     {
-      "order_details": "qwertgyhju",
-      "id": 125,
+      "order_details": "tsdfsddf",
+      "id": 126,
       "status": "done"
+    },
+    {
+      "order_details": "tsdfsddfddfffffffffffffff",
+      "id": 127,
+      "status": "to do"
+    },
+    {
+      "order_details": "888888888888888",
+      "id": 128,
+      "status": "to do"
     }
   ],
   "clients": [
@@ -28,42 +33,6 @@
       "name": "Annaa",
       "surname": "Nazwiskowa",
       "id": 2
-    },
-    {
-      "email": "justyna.korzycka@gmail.com",
-      "name": "Justyna Korzycka",
-      "surname": "sddqssdd",
-      "id": 3
-    },
-    {
-      "email": "justyna.korzycka@gmail.com",
-      "name": "Kasia",
-      "surname": "Kowalska",
-      "id": 4
-    },
-    {
-      "email": "justyna.korzycka@gmail.com",
-      "name": "Janina",
-      "surname": "nazwisko",
-      "id": 5
-    },
-    {
-      "email": "justyna.korzycka@gmail.com",
-      "name": "Justyna Korzycka",
-      "surname": "nazwiskosdfghgfd",
-      "id": 6
-    },
-    {
-      "email": "mail@mail.com",
-      "name": "Imię",
-      "surname": "Nazwiskoooo",
-      "id": 7
-    },
-    {
-      "email": "justyna.korzycka@gmail.com",
-      "name": "Justyna Korzycka",
-      "surname": "4tttttttttttttttt",
-      "id": 8
     }
   ]
 }

@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
+import { useEffect, useContext } from "react"
 import AddClient from "./AddClient";
 import ShowClients from "./ShowClients";
-
+import { ClientContext } from "./ClientContext";
 
 const Clients = () => {
 
-  const [clients, setClients] = useState([]);
+  const [clients, setClients] = useContext(ClientContext);
 
   useEffect(() => {
     const getData = async () => {
