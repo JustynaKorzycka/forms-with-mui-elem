@@ -6,14 +6,9 @@
       "status": "done"
     },
     {
-      "order_details": "tsdfsddf",
-      "id": 126,
-      "status": "done"
-    },
-    {
       "order_details": "tsdfsddfddfffffffffffffff",
       "id": 127,
-      "status": "to do"
+      "status": "done"
     },
     {
       "order_details": "888888888888888",
@@ -23,16 +18,16 @@
   ],
   "clients": [
     {
-      "id": 1,
-      "name": "Adam",
-      "surname": "Jochemczyk",
-      "email": "mymail@gmail.com"
-    },
-    {
       "email": "bardzo.ciekawy.mail@gmail.com",
       "name": "Annaa",
       "surname": "Nazwiskowa",
       "id": 2
+    },
+    {
+      "email": "justyna.korzycka@gmail.com",
+      "name": "Justyna Korzycka",
+      "surname": "Korzycka",
+      "id": 3
     }
   ]
 }

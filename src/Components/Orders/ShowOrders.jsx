@@ -1,6 +1,9 @@
 import { useContext } from 'react';
 import TableContent from '../AbstractComponents/TableContent'
 import { OrderContext } from './OrderContext';
+import TableContainer from '@mui/material/TableContainer';
+import Paper from '@mui/material/Paper';
+
 
 const ShowOrders = ({onDone }) => {
   const [orders, setOrders] = useContext(OrderContext);
@@ -37,7 +40,9 @@ const ShowOrders = ({onDone }) => {
   
 
   return (
-    <TableContent rows={rows} columnNames={columnNames} actions={actions}/>
+     <TableContainer component={Paper} sx={{ maxWidth: 800 }}>
+      <TableContent rows={rows} columnNames={columnNames} actions={actions} />
+      </TableContainer>
     
   )
 }

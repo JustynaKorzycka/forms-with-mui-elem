@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import AddOrder from "./AddOrder";
 import ShowOrders from "./ShowOrders";
 import { OrderContext } from "./OrderContext";
@@ -6,13 +6,17 @@ import { OrderContext } from "./OrderContext";
 const Orders = () => {
 
   const [orders, setOrders] = useContext(OrderContext);
+  const [loadStatus, setLoadStatus] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
       const ordersFromServ = await fetchOrders();
       setOrders(ordersFromServ);
+      await setLoadStatus(false)
     }
-    getData()
+    getData();
+  
+
   }, []);
 
   //Fetch data
@@ -25,7 +29,7 @@ const Orders = () => {
   return (
     <div>
       <h1>Orders section</h1>
-        <ShowOrders/>
+        {loadStatus ? 'loading' : <ShowOrders/>}
         <AddOrder />
     </div>
   )

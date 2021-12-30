@@ -2,6 +2,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
 import * as yup from "yup";
+import { useContext } from 'react';
+import { ClientContext } from './ClientContext';
 
 let validationSchema = yup.object().shape({
   email: yup.string().email('Podaj poprawny email').required('To pole jest wymagane'),
@@ -10,8 +12,21 @@ let validationSchema = yup.object().shape({
 
 })
 
-const AddClient = ({onAdd, onClose, oldData = ''}) => {
+const AddClient = ({onClose, oldData = ''}) => {
+  const [clients, setClients] = useContext(ClientContext);
 
+   const addClient = async (client) => {
+    client.id = clients[clients.length - 1].id + 1;
+    const res = await fetch('http://localhost:3000/clients', {
+      method: "POST",
+      headers: {
+        'Content-type' : 'application/json'
+      },
+      body: JSON.stringify(client)
+    })
+    const data = await res.json();
+    setClients(prevClients=>[...prevClients, data]);
+  }
   
   const initalVals = {
     email: '',
@@ -33,7 +48,7 @@ const AddClient = ({onAdd, onClose, oldData = ''}) => {
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
       const id = oldData.id;
-      onAdd(values, id);
+      addClient(values, id);
       resetForm();
       onClose();
       
